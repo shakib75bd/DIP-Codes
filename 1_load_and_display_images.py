@@ -6,5 +6,6 @@ img_color = cv2.imread('image.jpg')
 plt.figure(figsize=(8,4))
 plt.subplot(1,2,1); plt.imshow(img_gray, cmap='gray'); plt.title('Grayscale')
 plt.subplot(1,2,2); plt.imshow(cv2.cvtColor(img_color, cv2.COLOR_BGR2RGB)); plt.title('Color')
-plt.axis('off'); plt.tight_layout(); plt.show()
+
+plt.show()
 # Grayscale: 1 channel, Color: 3 channels (RGB). Grayscale shows intensity, color shows hues.
