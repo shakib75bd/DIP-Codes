@@ -12,7 +12,7 @@ rows,cols = img.shape
 crow = rows//2
 ccol = cols//2
 
-mask = np.ones_like(img);
+mask = np.ones_like(img)
 mask[crow-30:crow+30 , ccol-30:ccol+30] = 0
 
 fshift_lp = fshift * mask

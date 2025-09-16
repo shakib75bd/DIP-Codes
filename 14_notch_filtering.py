@@ -13,9 +13,9 @@ f = np.fft.fft2(noise)
 fshift = np.fft.fftshift(f)
 
 mask = np.ones_like(noise);
-mask[:, 60:65]=0; mask[:, -65:-60]=0
+mask[:, 30:65]=0; mask[:, -65:-30]=0
 fshift_nf = fshift*mask
-filtered = np.fft.ifft(np.fft.ifft(fshift_nf)).real
+filtered = np.fft.ifft2(np.fft.ifftshift(fshift_nf)).real
 
 plt.figure(figsize=(15,5))
 plt.subplot(1,3,1); plt.imshow(img, cmap='gray');plt.title('Original')
